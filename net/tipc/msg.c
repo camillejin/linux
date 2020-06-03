@@ -245,7 +245,11 @@ int tipc_msg_append(struct tipc_msg *_hdr, struct msghdr *m, int dlen,
 		skb_put(skb, cpy);
 		rem -= cpy;
 		total += msg_blocks(hdr) - curr;
+<<<<<<< HEAD
 	} while (rem > 0);
+=======
+	} while (rem);
+>>>>>>> 5e9eeccc58f3... tipc: fix NULL pointer dereference in streaming
 	return total - accounted;
 }
 
