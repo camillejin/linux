@@ -1385,8 +1385,7 @@ xt_replace_table(struct xt_table *table,
 	}
 
 	newinfo->initial_entries = private->initial_entries;
-<<<<<<< HEAD
-=======
+
 	/*
 	 * Ensure contents of newinfo are visible before assigning to
 	 * private.
@@ -1424,7 +1423,7 @@ xt_replace_table(struct xt_table *table,
 			  table->name, table->af, private->number);
 	}
 #endif
->>>>>>> 80055dab5de0... netfilter: x_tables: make xt_replace_table wait until old rules are not used anymore
+
 
 	rcu_assign_pointer(table->private, newinfo);
 	synchronize_rcu();
